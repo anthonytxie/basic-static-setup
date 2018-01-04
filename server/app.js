@@ -1,13 +1,20 @@
 require("dotenv").config();
 const express = require("express");
 const publicPath = __dirname + "/../public";
+const easyFilePath = __dirname + "/../public/easy.html";
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
-var smtpTransport = require("nodemailer-smtp-transport");
+const smtpTransport = require("nodemailer-smtp-transport");
+const path = require("path");
+
 const app = express();
 app.use(express.static(publicPath));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+app.get("/easy", (req, res) => {
+  res.sendFile(path.resolve(easyFilePath));
+});
 
 app.post("/contact", (req, res) => {
   console.log(req.body);

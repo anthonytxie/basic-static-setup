@@ -30,6 +30,7 @@
     "express": "^4.15.2",
     "mongoose": "^4.9.9",
     "nodemailer": "^4.4.1",
-    "nodemailer-smtp-transport": "^2.7.4"
+    "nodemailer-smtp-transport": "^2.7.4",
+    "path": "^0.12.7"
   }
 }
