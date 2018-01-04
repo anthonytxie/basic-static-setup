@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require("express");
 const publicPath = __dirname + "/../public";
 const easyFilePath = __dirname + "/../public/easy.html";
