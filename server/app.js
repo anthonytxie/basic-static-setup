@@ -11,10 +11,6 @@ app.use(express.static(publicPath));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get("/easy", (req, res) => {
-  res.sendFile(path.resolve(easyFilePath));
-});
-
 app.post("/contact", (req, res) => {
   console.log(req.body);
   // create reusable transporter object using the default SMTP transport
