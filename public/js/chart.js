@@ -77,7 +77,7 @@ var myChart = new Chart(ctx, {
 
     title: {
       display: true,
-      text: "Performance of Top 20 Market Cap Fund in 2017",
+      text: "Performance of A Top 20 Market Cap Fund in 2017",
       fontStyle: "bold"
     },
 
