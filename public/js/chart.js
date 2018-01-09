@@ -20,13 +20,11 @@ var myChart = new Chart(ctx, {
       "SEPT",
       "OCT",
       "NOV",
-      "OCT",
-      "NOV",
       "DEC"
     ],
     datasets: [
       {
-        label: "Data",
+        label: "Top 20 Market Cap",
         borderColor: gradientStroke,
         pointBorderColor: gradientStroke,
         pointBackgroundColor: gradientStroke,
@@ -40,51 +38,69 @@ var myChart = new Chart(ctx, {
         backgroundColor: gradientFill, // Specify the background color to the chart area
         borderWidth: 4,
         data: [
-          100,
-          120,
-          150,
-          170,
-          180,
-          170,
-          160,
-          180,
-          200,
-          250,
-          300,
-          400,
-          600,
-          2000
+          11180,
+          12604,
+          23098,
+          58600,
+          134669,
+          128066,
+          131627,
+          190797,
+          152618,
+          134336,
+          243841,
+          648036
         ]
-      },
-      {
-        label: "Second Data",
-        borderColor: gradientStroke,
-        pointBorderColor: gradientStroke,
-        pointBackgroundColor: gradientStroke,
-        pointHoverBackgroundColor: gradientStroke,
-        pointHoverBorderColor: gradientStroke,
-        pointBorderWidth: 5,
-        pointHoverRadius: 5,
-        pointHoverBorderWidth: 1,
-        pointRadius: 3,
-        fill: true, // If true, fill the area under the line
-        backgroundColor: gradientFill, // Specify the background color to the chart area
-        borderWidth: 4,
-        data: [10, 12, 15, 17, 18, 17, 16, 100, 120, 150, 180, 230, 400, 550]
       }
+      // {
+      //   label: "Second Data",
+      //   borderColor: gradientStroke,
+      //   pointBorderColor: gradientStroke,
+      //   pointBackgroundColor: gradientStroke,
+      //   pointHoverBackgroundColor: gradientStroke,
+      //   pointHoverBorderColor: gradientStroke,
+      //   pointBorderWidth: 5,
+      //   pointHoverRadius: 5,
+      //   pointHoverBorderWidth: 1,
+      //   pointRadius: 3,
+      //   fill: true, // If true, fill the area under the line
+      //   backgroundColor: gradientFill, // Specify the background color to the chart area
+      //   borderWidth: 4,
+      //   data: [10, 12, 15, 17, 18, 17, 16, 100, 120, 150, 180, 230, 400, 550]
+      // }
     ]
   },
   options: {
+    scaleLabel: function(label) {
+      return "$" + label.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    },
+
+    title: {
+      display: true,
+      text: "Performance of Top 20 Market Cap Fund in 2017",
+      fontStyle: "bold"
+    },
+
     animation: {
       easing: "easeInOutBack"
     },
     legend: {
-      position: "bottom"
+      position: "bottom",
+      onClick: null
     },
     scales: {
       yAxes: [
         {
           ticks: {
+            callback: function(value, index, values) {
+              // Convert the number to a string and splite the string every 3 charaters from the end
+              value = value.toString();
+              value = value.split(/(?=(?:...)*$)/);
+
+              // Convert the array to a string and format the output
+              value = value.join(",");
+              return "$" + value;
+            },
             fontColor: "rgba(0,0,0,0.5)",
             fontStyle: "bold",
             beginAtZero: true, // If true, scale will include 0 if it is not already included.
@@ -109,6 +125,28 @@ var myChart = new Chart(ctx, {
           }
         }
       ]
+    },
+    tooltips: {
+      enabled: true,
+      mode: "single",
+      callbacks: {
+        label: function(tooltipItems, data) {
+          value = tooltipItems.yLabel.toString();
+          value = value.split(/(?=(?:...)*$)/);
+          // Convert the array to a string and format the output
+          value = value.join(",");
+          return "$" + value;
+        },
+        labelColor: function(tooltipItem, chart) {
+          return {
+            borderColor: "rgba(244, 144, 128, 0.6)",
+            backgroundColor: "rgba(244, 144, 128, 0.9)"
+          };
+        },
+        labelTextColor: function(tooltipItem, chart) {
+          return "#543453";
+        }
+      }
     }
   }
 });
