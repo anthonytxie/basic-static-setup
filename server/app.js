@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const publicPath = __dirname + "/../public";
 const easyFilePath = __dirname + "/../public/easy.html";
@@ -26,8 +28,8 @@ app.post("/contact", (req, res) => {
   // setup email data with unicode symbols
   let mailOptions = {
     from: req.body.email, // sender address
-    to: ["anthonytxie@gmail.com"], // list of receivers
-    subject: "Contact Us Form", // Subject line
+    to: ["hodlbotcrypto@gmail.com"], // list of receivers
+    subject: "Beta Sign-Up", // Subject line
     text: "sent by: " + req.body.email
 
     // plain text body
