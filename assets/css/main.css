@@ -211,15 +211,15 @@ h2 {
 }
 
 .fullimagefloatright.engeneering {
-  background-image: url("../images/img_api.png"), -webkit-linear-gradient(270deg, #ff7983, #e64384);
-  background-image: url("../images/img_api.png"), linear-gradient(180deg, #ff7983, #e64384);
+  background-image: url("../img_api.png"), -webkit-linear-gradient(270deg, #ff7983, #e64384);
+  background-image: url("../img_api.png"), linear-gradient(180deg, #ff7983, #e64384);
   background-position: 50% 50%, 0px 0px;
   background-size: cover, auto;
 }
 
 .fullimagefloatright.business {
-  background-image: url("../images/img_dca.png"), -webkit-linear-gradient(116deg, #f5da6f, #f5906f);
-  background-image: url("../images/img_dca.png"), linear-gradient(334deg, #f5da6f, #f5906f);
+  background-image: url("../img_dca.png"), -webkit-linear-gradient(116deg, #f5da6f, #f5906f);
+  background-image: url("../img_dca.png"), linear-gradient(334deg, #f5da6f, #f5906f);
   background-position: 50% 50%, 0px 0px;
   background-size: cover, auto;
 }
@@ -313,15 +313,15 @@ h2 {
 }
 
 .fullimagefloatleft.design {
-  background-image: url("../images/img_long.png"), -webkit-linear-gradient(270deg, #407dda, #2069da);
-  background-image: url("../images/img_long.png"), linear-gradient(180deg, #407dda, #2069da);
+  background-image: url("../img_long.png"), -webkit-linear-gradient(270deg, #407dda, #2069da);
+  background-image: url("../img_long.png"), linear-gradient(180deg, #407dda, #2069da);
   background-position: 50% 50%, 0px 0px;
   background-size: cover, auto;
 }
 
 .fullimagefloatleft.rebalance {
-  background-image: url("../images/img_rebalance.png"), -webkit-linear-gradient(270deg, #407dda, #2069da);
-  background-image: url("../images/img_rebalance.png"), linear-gradient(180deg, #407dda, #2069da);
+  background-image: url("../img_rebalance.png"), -webkit-linear-gradient(270deg, #407dda, #2069da);
+  background-image: url("../img_rebalance.png"), linear-gradient(180deg, #407dda, #2069da);
   background-position: 50% 50%, 0px 0px;
   background-size: cover, auto;
 }

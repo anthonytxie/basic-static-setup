@@ -1,0 +1,156 @@
+doctype html
+html
+  // This site was created in Webflow. http://www.webflow.com
+  // Last Published: Sun Aug 14 2016 17:46:21 GMT+0000 (UTC)
+  head
+    meta(charset="utf-8")
+    title HodlBot
+    != css('main.css')
+    != css('chart.css')
+    script(src="js/webfont.js")
+    script(type="text/javascript").
+      WebFont.load({
+      google: {
+      families: [
+      "Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic",
+      "Roboto:300,regular,500"
+      ]
+      }
+      });
+    != js('modernizr.js')
+    link(href="favicon.png" rel="shortcut icon" type="image/x-icon")
+    link(href="images/webclip.png" rel="apple-touch-icon")
+    // Global site tag (gtag.js) - Google Analytics
+    // Google Analytics
+    script.
+      (function(i, s, o, g, r, a, m) {
+      i["GoogleAnalyticsObject"] = r;
+      (i[r] =
+      i[r] ||
+      function() {
+      (i[r].q = i[r].q || []).push(arguments);
+      }),
+      (i[r].l = 1 * new Date());
+      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+      })(
+      window,
+      document,
+      "script",
+      "https://www.google-analytics.com/analytics.js",
+      "ga"
+      );
+      ga("create", "UA-112081724-3", "auto");
+      ga("send", "pageview");
+    // End Google Analytics
+  body.body
+    .modal
+      h2.modalheading
+        | Get invited to our private and limited access beta. We'll send you an invite soon!
+      .contactform.w-form
+        form#email-form(data-name="Email Form" name="email-form" action="/contact" method="post" onsubmit="alert('Thank you. We will be in touch soon. ');")
+          input#email.formtextfield.w-input(data-name="Email" maxlength="256" name="email" placeholder="Your Email Address" required="required" type="email")
+          input.formbutton.w-button(data-wait="Please wait..." type="submit" value="Send" onclick="ga('send', 'event', 'Beta', 'Form Submit', 'Beta Signup')")
+          a.cancelbutton.w-button(data-ix="closemodal" href="#") X Close
+        .successmessage.w-form-done
+          p.successmessagetext We'll send you an invite soon!!
+          a.cancelbutton.w-button(data-ix="closemodal" href="#") X Close
+        .w-form-fail
+          p Oops! Something went wrong while submitting the form
+    .bodywrapper
+      .herosection
+        .heronav
+          h3.logotype(data-ix="loader")
+            span.logotypeemphasis Hodl
+            | Bot
+        .wrapper(data-ix="loader")
+          img.herologo(data-ix="logo" height="160" src="logo.png" width="160")
+          h1.heroheading Crypto Investing on Autopilot
+          h6.herobody
+            | Hodlbot will diversify, rebalance and dollar cost average into your long-term cryptocurrency investments automatically.
+          a.herobutton.w-button(data-ix="modal" href="#") Get Exclusive Access
+        ._2.right.stripe(data-ix="move-right-stripe-3")
+        ._4.right.stripe(data-ix="move-right-stripe-2")
+        ._1.right.stripe(data-ix="move-right-stripe-2")
+        .right.stripe(data-ix="move-right-stripe")
+        ._3.left.stripe(data-ix="move-left-stripe")
+        ._1.left.stripe(data-ix="move-left-stripe-2")
+        .left.stripe(data-ix="move-left-stripe-3")
+        .stripe(data-ix="move-left-stripe")
+      .section.w-clearfix
+        .engeneering.fullimagefloatright
+        .halfsectionfloatleft
+          h2.sectionheading Connect Through a Secure Exchange
+          p.sectiontext
+            | Our algorithimic trading bot can be paired to any major exchange. If you're new to cryptocurrencies, one of our experts can help you get signed up, verified, and funded on a secure major exchange.
+      .section.w-clearfix
+        .design.fullimagefloatleft
+        .halfsectionfloatright
+          h2.sectionheading Own The Whole Crypto Market
+          p.sectiontext
+            | Don't risk it all by betting on the wrong coin. We track the top 20 coins in the market to give you a diversified portfolio. Passive diversification has been proven to beat active trading in the stock market and in cryptocurrencies.
+      .section.w-clearfix
+        .business.fullimagefloatright
+        .halfsectionfloatleft
+          h2.sectionheading Keep All of Your Returns
+          p.sectiontext
+            | Unlike traditionally managed funds, we don't hold your money so we don't take a percentage fee based on your total assets under management. All we ask for our service is $15 per month.
+      .section.w-clearfix
+        .rebalance.fullimagefloatleft
+        .halfsectionfloatright
+          h2.sectionheading  Automatic Weekly Rebalancing 
+          p.sectiontext
+            | We automatically rebalance and reinvest your gains every week against the top 20 market cap cryptocurrencies. Our algorithmic trading bot saves you money on transaction fees by rebalancing in the fewest possible number of trades.
+      .chart-section
+        #padding-top.wrapper
+          h2.teamheading  Buy The Whole Haystack 
+          p.bluesectiontext
+            | Our backtests show that holding the top 20 coins from January 2017 would have netted a 6580% yearly return. By choosing a single coin, there was 90% chance of performing worse than the index.
+          #chart-wrapper
+            canvas#myChart
+      .bluesection
+        .wrapper
+          h2.teamheading Portfolio Templates
+          p.bluesectiontext
+            | Users can create their own and share them with the community. Here are a few just to get started
+          .members.w-row
+            .w-col.w-col-6
+              a.memberwrapper.w-inline-block(data-ix="member-hover" target="_blank")
+                .memberhoverwrapper
+                  h3.memberheading Top 20 Coins
+                  h4.membersubtitle MARKET CAP
+                  p.memberbio  Diversify your investment across the top 20 coins by market cap.
+                img.signature(src="img_1.png")
+              a.memberwrapper.w-inline-block(data-ix="member-hover" target="_blank")
+                .memberhoverwrapper
+                  h3.memberheading Top 20 Protocol Coins
+                  h4.membersubtitle PROTOCOL THEME
+                  p.memberbio Invest into the underlying protocol infrastructure for blockchain.
+                img.signature(src="img_2.png")
+            .w-col.w-col-6
+              a.memberwrapper.w-inline-block(data-ix="member-hover" target="_blank")
+                .memberhoverwrapper
+                  h3.memberheading Recent 20 ICOs
+                  h4.membersubtitle GROWTH THEME
+                  p.memberbio Diversify your risk across early-stage coins that recently had ICOs.
+                img.signature(src="img_3.png")
+              a.memberwrapper.w-inline-block(data-ix="member-hover" target="_blank")
+                .memberhoverwrapper
+                  h3.memberheading Create Your Own
+                  h4.membersubtitle SHARE WITH FRIENDS
+                  p.memberbio For advanced users to create their own long-term cryptocurrency portfolios.
+                img.signature(src="img_4.png")
+          a.bigbutton.w-button(data-ix="modal" href="#") Receive My Private Beta Invite
+        .footer
+          p.footertext
+            | Made with ♥ in Canada.
+            br
+            | All Rights Reserved, HODLBOT 2018
+    != js("jquery.min.js")
+    != js("webflow.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js")
+    != js("chart.js")
+    //if lte IE 9
+      script(src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js")

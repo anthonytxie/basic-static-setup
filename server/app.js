@@ -7,9 +7,15 @@ const smtpTransport = require("nodemailer-smtp-transport");
 const path = require("path");
 
 const app = express();
-app.use(express.static(publicPath));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.set("view engine", "pug");
+app.use(require("connect-assets")());
+app.use(express.static("resources"));
+
+app.get("/", (req, res) => {
+  res.render("index");
+});
 
 app.post("/contact", (req, res) => {
   console.log(req.body);
