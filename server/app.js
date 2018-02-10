@@ -11,6 +11,15 @@ app.use(express.static(publicPath));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+app.get(
+  "/.well-known/acme-challenge/-OdRh6mQhDBGCxZFO-LyZ1NL6wg7oM2l6CKxR7hZvoo",
+  (req, res) => {
+    res.send(
+      "-OdRh6mQhDBGCxZFO-LyZ1NL6wg7oM2l6CKxR7hZvoo.60dsXI9WdBiaTK_e3WJrMIv-pzOGHo60UXioUsSnz78"
+    );
+  }
+);
+
 app.post("/contact", (req, res) => {
   console.log(req.body);
   // create reusable transporter object using the default SMTP transport
