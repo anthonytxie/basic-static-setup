@@ -5,12 +5,12 @@ const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const smtpTransport = require("nodemailer-smtp-transport");
 const path = require("path");
-const secure = require("express-force-https");
+const sslRedirect = require("heroku-ssl-redirect");
 const app = express();
+app.use(sslRedirect());
 app.use(express.static(publicPath));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(secure);
 
 app.get(
   "/.well-known/acme-challenge/-OdRh6mQhDBGCxZFO-LyZ1NL6wg7oM2l6CKxR7hZvoo",
