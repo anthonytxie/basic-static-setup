@@ -13,10 +13,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get(
-  "/.well-known/acme-challenge/-OdRh6mQhDBGCxZFO-LyZ1NL6wg7oM2l6CKxR7hZvoo",
+  "/.well-known/acme-challenge/sgW1ESMoInyf-WiE_npzC368fbW8Z0NS0tqPy83Wd0A",
   (req, res) => {
     res.send(
-      "-OdRh6mQhDBGCxZFO-LyZ1NL6wg7oM2l6CKxR7hZvoo.60dsXI9WdBiaTK_e3WJrMIv-pzOGHo60UXioUsSnz78"
+      "sgW1ESMoInyf-WiE_npzC368fbW8Z0NS0tqPy83Wd0A.eQ3XEsY-UclFzJPyyNgaIg3TvA4bm-0ZIb6_aXbVpM4"
     );
   }
 );
