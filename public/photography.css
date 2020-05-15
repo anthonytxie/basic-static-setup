@@ -44,7 +44,7 @@ section p {
 }
 
 html {
-    background-image: url("/images/stardew-background-night.png");
+    background:#1D1E2A url("/images/stardew-background-night.png");
     background-size: auto;
     background-repeat:   no-repeat;
     background-position: center center;   
