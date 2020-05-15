@@ -360,6 +360,8 @@ audio {
         font-size: 2rem;
     }
 
-
+    html {
+        background-position: 0;
+    }
 }
 
