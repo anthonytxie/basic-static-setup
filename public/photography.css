@@ -1,4 +1,7 @@
 
+
+
+
 /* diff  */
 html {
     background:#1D1E2A url("/images/stardew-background-night.png");
@@ -334,7 +337,7 @@ audio {
     }
 
     section p {
-        font-size: 40px;
+        font-size: 50px;
         padding: 20px;
         padding-top: 10px;
     }
@@ -352,4 +355,15 @@ audio {
         font-size: 2rem;
     }
 
+}
+
+
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }
