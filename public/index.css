@@ -1,0 +1,188 @@
+
+@font-face {
+	font-family: 'stardewFont';
+	src: url('fonts/Stardew_Valley.otf'); 
+	src: 
+		local('Stardew Valley'),
+		local('Stardew-Valley'),
+		url('fonts/Stardew_Valley.otf') 
+		format('opentype');
+}
+
+section h1, h2 {
+    color: #E19F0E;
+    font-family: stardewFont;
+    margin: 20px;
+    font-size: 4rem;
+}
+
+section h2 {
+    text-align: center;
+}
+
+section p {
+    color: #E19F0E;
+    font-family: stardewFont;
+    margin: 10px;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.requirements-flexbox {
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin: auto;
+
+}
+
+
+.back {
+    float: left;
+    font-size: 1rem;
+
+}
+.requirement {
+    height: 100px;
+    width: 100px;
+    background: white;
+    margin: auto;
+}
+
+html {
+    background-image: url("/images/valley-background.png");
+    background-size: auto;
+    background-repeat:   no-repeat;
+    background-position: center center;   
+}
+
+.bundle-flexbox {
+    display: flex;
+    width: 1000px;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 150px;
+
+}
+
+.bundle-box-placeholder {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background-image: url('/images/item-placeholder.png');
+    background-size:     cover;                      /* <------ */
+
+    background-repeat:   no-repeat;
+    background-position: center center;   
+    
+}
+
+#requirement-1 {
+    background-image: url('/images/camera.png');
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;       
+}
+
+#requirement-2 {
+    background-image: url('/images/cooking.png');
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center;       
+}
+
+
+#requirement-3 {
+    background-image: url('/images/coffee.png');
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;       
+}
+
+
+#requirement-4 {
+    background-image: url('/images/music.png');
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;       
+}
+
+
+#requirement-5 {
+    background-image: url('/images/makeup.png');
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;       
+}
+
+
+#requirement-6 {
+    background-image: url('/images/bath.png');
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;       
+}
+
+.requirement-item-flexbox {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+.requirement-description p {
+    text-align: center;
+}
+
+
+form {
+    margin: 20px;
+    display: flex;
+}
+
+html {
+    font-family: stardewFont;
+}
+
+input[type="text"] {
+    font-family: stardewFont;
+    font-size: 20px;
+    border: 4px solid #FF8237;
+    background: #F5B369;
+    color: white;
+
+}
+
+button {
+    background: #F7E389;
+    border: 4px solid #FF8237;
+    color: gray;
+}
+
+
+
+audio {
+    margin-top: 100px;
+    zoom: 0.5;
+}
+
+
+/* bundle complete */ 
+
+.swal2-show {
+    background: rgb(62,172,254)
+}
+
+#swal2-title {
+    color: #3AE3F4;
+}
+
+
+#swal2-content {
+    color: #3AE3F4;
+}
+
+a {
+    text-decoration:none;
+}

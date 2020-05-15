@@ -1,0 +1,261 @@
+
+@font-face {
+	font-family: 'stardewFont';
+	src: url('fonts/Stardew_Valley.otf'); 
+	src: 
+		local('Stardew Valley'),
+		local('Stardew-Valley'),
+		url('fonts/Stardew_Valley.otf') 
+		format('opentype');
+}
+
+section h1, h2 {
+    color: #E1A100;
+    font-family: stardewFont;
+    margin: 20px;
+    font-size: 2rem;
+}
+
+section h2 {
+    text-align: center;
+}
+
+section p {
+    color: #E1A100;
+    font-family: stardewFont;
+    margin: 10px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.requirements-flexbox {
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin: auto;
+
+}
+
+.requirement {
+    height: 100px;
+    width: 100px;
+    background: white;
+    margin: 5px;
+}
+
+section {
+    filter:brightness(100%);
+
+}
+html {
+    background-image: 
+    linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ),
+    url('/images/makeup-background.jpg');
+    background-size: auto;
+    background-repeat:   no-repeat;
+    background-position: center center;   
+}
+
+.back {
+    float: left;
+    font-size: 1rem;
+    zoom: 2;
+    text-decoration: none;
+    color: #E1A100
+
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.bundle-flexbox {
+    display: flex;
+    width: 800px;
+    flex-direction: row-reverse;
+    margin-left: -200px;    
+}
+
+.bundle-box-placeholder {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background-image: url('/images/item-placeholder.png');
+    background-size:     cover;                      /* <------ */
+
+    background-repeat:   no-repeat;
+    background-position: center center;   
+    
+}
+
+#box-image-1 {
+    width: 100px;
+    height: 100px;
+    background-image: url('/images/goth.png');
+    background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;       
+    margin: 20px;
+}
+
+#box-image-2 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    background-image: url('/images/egirl.png');
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;       
+    margin: 20px;
+}
+
+#box-image-3 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    background-image: url('/images/floral.png');
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;     
+    margin: 20px;
+}
+
+#box-image-4 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    background-image: url('/images/picasso.png');
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;     
+    margin: 20px;
+}
+
+#box-image-5 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    background-image: url('/images/spooky.png');
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;     
+    margin: 20px;
+}
+
+#box-image-6 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    background-image: url('/images/desi.png');
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;     
+    margin: 20px;
+}
+
+
+#requirement-1 {
+    background-image: url('/images/goth.png');
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;       
+}
+
+#requirement-2 {
+    background-image: url('/images/egirl.png');
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center;       
+}
+
+
+#requirement-3 {
+    background-image: url('/images/floral.png');
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;       
+}
+
+
+#requirement-4 {
+    background-image: url('/images/picasso.png');
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;       
+}
+
+
+#requirement-5 {
+    background-image: url('/images/spooky.png');
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;       
+}
+
+
+#requirement-6 {
+    background-image: url('/images/desi.png');
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;       
+}
+
+
+form {
+    margin: 20px;
+    display: flex;
+}
+
+html {
+    font-family: stardewFont;
+}
+
+input[type="text"] {
+    font-family: stardewFont;
+    font-size: 20px;
+    border: 4px solid #FF8237;
+    background: #F5B369;
+    color: white;
+
+}
+
+button {
+    background: #F7E389;
+    border: 4px solid #FF8237;
+    font-family: stardewFont;
+    color: 
+}
+
+.requirements-item-flexbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.requirement {
+    margin: auto;
+}
+
+audio {
+    margin-top: 100px;
+    zoom: 0.5;
+}
+
+
+/* bundle complete */ 
+
+.swal2-show {
+    background: rgb(62,172,254)
+}
+
+#swal2-title {
+    color: #3AE3F4;
+}
+
+
+#swal2-content {
+    color: #3AE3F4;
+}

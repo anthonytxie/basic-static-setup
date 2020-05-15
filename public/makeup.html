@@ -1,0 +1,405 @@
+<html>
+    <link rel="stylesheet" type="text/css" href="/makeup.css" />
+    <link rel="stylesheet" type="text/js" href="/js/photography.js" />
+
+    <section>
+        <div class='header'>
+            <a href='/' class='back'>←</a>
+            <h1>Makeup Bundle</h1>
+        </div>
+
+        <div class="bundle-flexbox">
+            <div class="bundle-box-placeholder"></div>
+            <div class="bundle-box-placeholder"></div>
+            <div class="bundle-box-placeholder"></div>
+            <div class="bundle-box-placeholder"></div>
+        </div>
+        <div>
+            <form>
+                <input type="text" id="code" name="secret-code" placeholder="enter the secret codes!" /><br /><br />
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div>
+            <h2>
+                Requirements
+            </h2>
+            <div class="requirements-flexbox">
+                <div class='requirement-item-flexbox'>
+                    <div class="requirement" id="requirement-1">
+                    </div>
+                    <div class='requirement-description'>
+                        <p>
+                            Goth makeup
+                        </p>
+                    </div>
+                </div>
+                
+                <div class='requirement-item-flexbox'>
+                    <div class="requirement" id="requirement-2">
+                    </div>
+                    <div class='requirement-description'>
+                        <p>
+                            E-girl makeup
+                        </p>
+                    </div>
+                </div>
+                <div class='requirement-item-flexbox'>
+                    <div class="requirement" id="requirement-3">
+                    </div>
+                    <div class='requirement-description'>
+                        <p>
+                            Floral makeup
+                        </p>
+                    </div>
+                </div>
+                <div class='requirement-item-flexbox'>
+                    <div class="requirement" id="requirement-4">
+                    </div>
+                    <div class='requirement-description'>
+                        <p>
+                            Picasso makeup
+                        </p>
+                    </div>
+                </div>
+                <div class='requirement-item-flexbox'>
+                    <div class="requirement" id="requirement-5">
+                    </div>
+                    <div class='requirement-description'>
+                        <p>
+                            Spooky makeup
+                        </p>
+                    </div>
+                </div>
+                <div class='requirement-item-flexbox'>
+                    <div class="requirement" id="requirement-6">
+                    </div>
+                    <div class='requirement-description'>
+                        <p>
+                            Desi makeup
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p>
+                Acquire 4 out of the items in the bundle. Once you have them, send a message to Toni to get the secret
+                codes...
+            </p>
+
+            <audio controls autoplay>  
+                <source src="/music/makeup.mp3" type="audio/mp3">  
+            </audio>  
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.2.0/dist/confetti.browser.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <script>
+        var count = 1000;
+        var defaults = {
+            origin: { y: 0.7 },
+        };
+
+        function fire(particleRatio, opts) {
+            confetti(
+                Object.assign({}, defaults, opts, {
+                    particleCount: Math.floor(count * particleRatio),
+                })
+            );
+        }
+
+        let bundleInput = document.getElementById('code');
+        let box1 = document.getElementById('box-image-1');
+        let box2 = document.getElementById('box-image-2');
+        let box3 = document.getElementById('box-image-3');
+        let box4 = document.getElementById('box-image-4');
+
+        document.querySelector('form').addEventListener('submit', function (e) {
+            //prevent the normal submission of the form
+            e.preventDefault();
+            switch (bundleInput.value) {
+                case '1':
+                    if (!document.querySelector('#box-image-1')) {
+                        document.getElementsByClassName('bundle-box-placeholder')[0].remove();
+                        g = document.createElement('div');
+                        g.setAttribute('id', 'box-image-1');
+                        g.setAttribute('class', 'finished-item');
+                        document.querySelector('.bundle-flexbox').append(g);
+                        var bundle_sound = new Audio('/music/1.mp3');
+                        bundle_sound.play();
+                        if (document.getElementsByClassName('finished-item').length == 4) {
+                            fire(0.25, {
+                                spread: 26,
+                                startVelocity: 55,
+                            });
+                            fire(0.2, {
+                                spread: 60,
+                            });
+                            fire(0.35, {
+                                spread: 100,
+                                decay: 0.91,
+                            });
+                            fire(0.1, {
+                                spread: 120,
+                                startVelocity: 25,
+                                decay: 0.92,
+                            });
+                            fire(0.1, {
+                                spread: 120,
+                                startVelocity: 45,
+                            });
+
+                            Swal.fire({
+                                title: 'Bundle Complete',
+                                text: 'Collect your reward from Toni!',
+                                showConfirmButton: false,
+                            });
+                            var success_sound = new Audio('/music/success.mp3');
+                            success_sound.play();
+                            document.querySelector(".swal2-modal").style.backgroundColor = '#3EACFE';
+                            document.querySelector(".swal2-modal").style.border = '4px solid #D85C10';
+                            document.querySelector(".swal2-modal").style.height = '250px';
+                            document.querySelector(".swal2-modal").style.width = '100%';
+                        }
+                    }
+                    document.querySelector('form').reset();
+                    break;
+                case '2':
+                    if (!document.querySelector('#box-image-2')) {
+                        document.getElementsByClassName('bundle-box-placeholder')[0].remove();
+                        g = document.createElement('div');
+                        g.setAttribute('id', 'box-image-2');
+                        g.setAttribute('class', 'finished-item');
+                        document.querySelector('.bundle-flexbox').append(g);
+                        var bundle_sound = new Audio('/music/3.mp3');
+                        bundle_sound.play();
+                        if (document.getElementsByClassName('finished-item').length == 4) {
+                            fire(0.25, {
+                                spread: 26,
+                                startVelocity: 55,
+                            });
+                            fire(0.2, {
+                                spread: 60,
+                            });
+                            fire(0.35, {
+                                spread: 100,
+                                decay: 0.91,
+                            });
+                            fire(0.1, {
+                                spread: 120,
+                                startVelocity: 25,
+                                decay: 0.92,
+                            });
+                            fire(0.1, {
+                                spread: 120,
+                                startVelocity: 45,
+                            });
+
+                            Swal.fire({
+                                title: 'Bundle Complete',
+                                text: 'Collect your reward from Toni!',
+                                showConfirmButton: false,
+                            });
+                            var success_sound = new Audio('/music/success.mp3');
+                            success_sound.play();
+                            document.querySelector(".swal2-modal").style.backgroundColor = '#3EACFE';
+                            document.querySelector(".swal2-modal").style.border = '4px solid #D85C10';
+                            document.querySelector(".swal2-modal").style.height = '250px';
+                            document.querySelector(".swal2-modal").style.width = '100%';
+                        }
+                    }
+                    document.querySelector('form').reset();
+                    break;
+                case '3':
+                    if (!document.querySelector('#box-image-3')) {
+                        document.getElementsByClassName('bundle-box-placeholder')[0].remove();
+                        g = document.createElement('div');
+                        g.setAttribute('id', 'box-image-3');
+                        g.setAttribute('class', 'finished-item');
+                        var bundle_sound = new Audio('/music/1.mp3');
+                        bundle_sound.play();
+                        document.querySelector('.bundle-flexbox').append(g);
+                        if (document.getElementsByClassName('finished-item').length == 4) {
+                            fire(0.25, {
+                                spread: 26,
+                                startVelocity: 55,
+                            });
+                            fire(0.2, {
+                                spread: 60,
+                            });
+                            fire(0.35, {
+                                spread: 100,
+                                decay: 0.91,
+                            });
+                            fire(0.1, {
+                                spread: 120,
+                                startVelocity: 25,
+                                decay: 0.92,
+                            });
+                            fire(0.1, {
+                                spread: 120,
+                                startVelocity: 45,
+                            });
+
+                            Swal.fire({
+                                title: 'Bundle Complete',
+                                text: 'Collect your reward from Toni!',
+                                showConfirmButton: false,
+                            });
+                            var success_sound = new Audio('/music/success.mp3');
+                            success_sound.play();
+                            document.querySelector(".swal2-modal").style.backgroundColor = '#3EACFE';
+                            document.querySelector(".swal2-modal").style.border = '4px solid #D85C10';
+                            document.querySelector(".swal2-modal").style.height = '250px';
+                            document.querySelector(".swal2-modal").style.width = '100%';
+                        }
+                    }
+                    document.querySelector('form').reset();
+                    break;
+                case '4':
+                    if (!document.querySelector('#box-image-4')) {
+                        document.getElementsByClassName('bundle-box-placeholder')[0].remove();
+                        g = document.createElement('div');
+                        g.setAttribute('id', 'box-image-4');
+                        g.setAttribute('class', 'finished-item');
+                        var bundle_sound = new Audio('/music/2.mp3');
+                        bundle_sound.play();
+                        document.querySelector('.bundle-flexbox').append(g);
+                        if (document.getElementsByClassName('finished-item').length == 4) {
+                            fire(0.25, {
+                                spread: 26,
+                                startVelocity: 55,
+                            });
+                            fire(0.2, {
+                                spread: 60,
+                            });
+                            fire(0.35, {
+                                spread: 100,
+                                decay: 0.91,
+                            });
+                            fire(0.1, {
+                                spread: 120,
+                                startVelocity: 25,
+                                decay: 0.92,
+                            });
+                            fire(0.1, {
+                                spread: 120,
+                                startVelocity: 45,
+                            });
+
+                            Swal.fire({
+                                title: 'Bundle Complete',
+                                text: 'Collect your reward from Toni!',
+                                showConfirmButton: false,
+                            });
+                            var success_sound = new Audio('/music/success.mp3');
+                            success_sound.play();
+                            document.querySelector(".swal2-modal").style.backgroundColor = '#3EACFE';
+                            document.querySelector(".swal2-modal").style.border = '4px solid #D85C10';
+                            document.querySelector(".swal2-modal").style.height = '250px';
+                            document.querySelector(".swal2-modal").style.width = '100%';
+                        }
+                    }
+                    document.querySelector('form').reset();
+                    break;
+                case '5':
+                    if (!document.querySelector('#box-image-5')) {
+                        document.getElementsByClassName('bundle-box-placeholder')[0].remove();
+                        g = document.createElement('div');
+                        g.setAttribute('id', 'box-image-5');
+                        g.setAttribute('class', 'finished-item');
+                        var bundle_sound = new Audio('/music/3.mp3');
+                        bundle_sound.play();
+                        document.querySelector('.bundle-flexbox').append(g);
+                        if (document.getElementsByClassName('finished-item').length == 4) {
+                            fire(0.25, {
+                                spread: 26,
+                                startVelocity: 55,
+                            });
+                            fire(0.2, {
+                                spread: 60,
+                            });
+                            fire(0.35, {
+                                spread: 100,
+                                decay: 0.91,
+                            });
+                            fire(0.1, {
+                                spread: 120,
+                                startVelocity: 25,
+                                decay: 0.92,
+                            });
+                            fire(0.1, {
+                                spread: 120,
+                                startVelocity: 45,
+                            });
+
+                            Swal.fire({
+                                title: 'Bundle Complete',
+                                text: 'Collect your reward from Toni!',
+                                showConfirmButton: false,
+                            });
+                            var success_sound = new Audio('/music/success.mp3');
+                            success_sound.play();
+                            document.querySelector(".swal2-modal").style.backgroundColor = '#3EACFE';
+                            document.querySelector(".swal2-modal").style.border = '4px solid #D85C10';
+                            document.querySelector(".swal2-modal").style.height = '250px';
+                            document.querySelector(".swal2-modal").style.width = '100%';
+                        }
+                    }
+                    document.querySelector('form').reset();
+                    break;
+
+                case '6':
+                    if (!document.querySelector('#box-image-6')) {
+                        document.getElementsByClassName('bundle-box-placeholder')[0].remove();
+                        g = document.createElement('div');
+                        g.setAttribute('id', 'box-image-6');
+                        g.setAttribute('class', 'finished-item');
+                        var bundle_sound = new Audio('/music/4.mp3');
+                        bundle_sound.play();
+                        document.querySelector('.bundle-flexbox').append(g);
+                        if (document.getElementsByClassName('finished-item').length == 4) {
+                            fire(0.25, {
+                                spread: 26,
+                                startVelocity: 55,
+                            });
+                            fire(0.2, {
+                                spread: 60,
+                            });
+                            fire(0.35, {
+                                spread: 100,
+                                decay: 0.91,
+                            });
+                            fire(0.1, {
+                                spread: 120,
+                                startVelocity: 25,
+                                decay: 0.92,
+                            });
+                            fire(0.1, {
+                                spread: 120,
+                                startVelocity: 45,
+                            });
+
+                            Swal.fire({
+                                title: 'Bundle Complete',
+                                text: 'Collect your reward from Toni!',
+                                showConfirmButton: false,
+                            });
+                            var success_sound = new Audio('/music/success.mp3');
+                            success_sound.play();
+                            document.querySelector(".swal2-modal").style.backgroundColor = '#3EACFE';
+                            document.querySelector(".swal2-modal").style.border = '4px solid #D85C10';
+                            document.querySelector(".swal2-modal").style.height = '250px';
+                            document.querySelector(".swal2-modal").style.width = '100%';
+                        }
+                    }
+                    document.querySelector('form').reset();
+                    break;
+                default:
+                        var error_sound = new Audio('/music/error.mp3');
+                        error_sound.play();
+            }
+        });
+    </script>
+</html>
