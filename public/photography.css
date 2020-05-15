@@ -330,17 +330,16 @@ audio {
     }
 
     .requirement-description p {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     section p {
-        font-size: 25px;
+        font-size: 35px;
         padding: 40px;
         padding-top: 20px;
         padding-bottom: 20px;
-
-        
     }
+
 
     #swal2-title {
         font-size: 4rem;

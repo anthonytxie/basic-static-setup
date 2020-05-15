@@ -192,4 +192,11 @@ a {
         margin: 20px;
         margin-top: 80px;
     }
+
+    section h1, h2 {
+        font-size: 8rem;
+    }
+    section p { 
+        font-size: 4.5rem;
+    }
 }
