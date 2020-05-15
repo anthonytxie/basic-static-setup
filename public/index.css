@@ -186,7 +186,7 @@ a {
         width: 200px;
     }
     .requirement-description p {
-        font-size: 36px;
+        font-size: 75px;
     }
     section {
         margin: 20px;
@@ -198,5 +198,8 @@ a {
     }
     section p { 
         font-size: 4.5rem;
+    }
+    .requirement-item-flexbox {
+        width: 200px;
     }
 }
