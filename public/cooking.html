@@ -1,29 +1,27 @@
-
 <html>
     <link rel="stylesheet" type="text/css" href="/cooking.css" />
     <link rel="stylesheet" type="text/js" href="/js/photography.js" />
-    <link rel="icon" type="image/png" href='/images/favicon.png' />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
 
     <section>
-        <div class='header'>
-            <a href='/' class='back'>←</a>
+        <div class="header">
+            <a href="/" class="back">←</a>
             <h1>Cooking Bundle</h1>
         </div>
-        <div class='flexbox-container'>
+        <div class="flexbox-container">
+            <div>
+                <form>
+                    <input type="text" id="code" name="secret-code" placeholder="enter the secret codes!" /><br /><br />
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
 
-        <div>
-            <form>
-                <input type="text" id="code" name="secret-code" placeholder="enter the secret codes!" /><br /><br />
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-
-        <div class="bundle-flexbox">
-            <div class="bundle-box-placeholder"></div>
-            <div class="bundle-box-placeholder"></div>
-            <div class="bundle-box-placeholder"></div>
-            <div class="bundle-box-placeholder"></div>
-        </div>
+            <div class="bundle-flexbox">
+                <div class="bundle-box-placeholder"></div>
+                <div class="bundle-box-placeholder"></div>
+                <div class="bundle-box-placeholder"></div>
+                <div class="bundle-box-placeholder"></div>
+            </div>
         </div>
 
         <div>
@@ -36,71 +34,65 @@
             </p>
 
             <div class="requirements-flexbox">
-                <div class='requirement-item-flexbox'>
-                    <div class="requirement" id="requirement-1">
-                    </div>
-                    <div class='requirement-description'>
+                <div class="requirement-item-flexbox">
+                    <div class="requirement" id="requirement-1"></div>
+                    <div class="requirement-description">
                         <p>
                             Delicious Lunch
                         </p>
                     </div>
                 </div>
-                
-                <div class='requirement-item-flexbox'>
-                    <div class="requirement" id="requirement-2">
-                    </div>
-                    <div class='requirement-description'>
+
+                <div class="requirement-item-flexbox">
+                    <div class="requirement" id="requirement-2"></div>
+                    <div class="requirement-description">
                         <p>
                             Seafood soup
                         </p>
                     </div>
                 </div>
-                <div class='requirement-item-flexbox'>
-                    <div class="requirement" id="requirement-3">
-                    </div>
-                    <div class='requirement-description'>
+                <div class="requirement-item-flexbox">
+                    <div class="requirement" id="requirement-3"></div>
+                    <div class="requirement-description">
                         <p>
                             Wild flower
                         </p>
                     </div>
                 </div>
-                <div class='requirement-item-flexbox'>
-                    <div class="requirement" id="requirement-4">
-                    </div>
-                    <div class='requirement-description'>
+                <div class="requirement-item-flexbox">
+                    <div class="requirement" id="requirement-4"></div>
+                    <div class="requirement-description">
                         <p>
                             Wild herb
                         </p>
                     </div>
                 </div>
-                <div class='requirement-item-flexbox'>
-                    <div class="requirement" id="requirement-5">
-                    </div>
-                    <div class='requirement-description'>
+                <div class="requirement-item-flexbox">
+                    <div class="requirement" id="requirement-5"></div>
+                    <div class="requirement-description">
                         <p>
                             Gelato
                         </p>
                     </div>
                 </div>
-                <div class='requirement-item-flexbox'>
-                    <div class="requirement" id="requirement-6">
-                    </div>
-                    <div class='requirement-description'>
+                <div class="requirement-item-flexbox">
+                    <div class="requirement" id="requirement-6"></div>
+                    <div class="requirement-description">
                         <p>
                             Fruit salad
                         </p>
                     </div>
                 </div>
             </div>
-            <audio controls autoplay>  
-                <source src="/music/saloon.mp3" type="audio/mp3">  
-            </audio>  
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.2.0/dist/confetti.browser.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-
+    <script>
+        var music = new Audio('/music/saloon.mp3');
+        music.play();
+    </script>
     <script>
         var count = 1000;
         var defaults = {
@@ -163,13 +155,13 @@
                             });
                             var success_sound = new Audio('/music/success.mp3');
                             success_sound.play();
-                            document.querySelector(".swal2-modal").style.backgroundColor = '#3EACFE';
-                            document.querySelector(".swal2-modal").style.border = '4px solid #D85C10';
-                            document.querySelector(".swal2-modal").style.height = '250px';
+                            document.querySelector('.swal2-modal').style.backgroundColor = '#3EACFE';
+                            document.querySelector('.swal2-modal').style.border = '4px solid #D85C10';
+                            document.querySelector('.swal2-modal').style.height = '250px';
                             if (/Mobi|Android/i.test(navigator.userAgent)) {
-                                document.querySelector(".swal2-modal").style.height = '1500px';
+                                document.querySelector('.swal2-modal').style.height = '1500px';
                             }
-                            document.querySelector(".swal2-modal").style.width = '100%';
+                            document.querySelector('.swal2-modal').style.width = '100%';
                         }
                     }
                     document.querySelector('form').reset();
@@ -212,13 +204,13 @@
                             });
                             var success_sound = new Audio('/music/success.mp3');
                             success_sound.play();
-                            document.querySelector(".swal2-modal").style.backgroundColor = '#3EACFE';
-                            document.querySelector(".swal2-modal").style.border = '4px solid #D85C10';
-                            document.querySelector(".swal2-modal").style.height = '250px';
+                            document.querySelector('.swal2-modal').style.backgroundColor = '#3EACFE';
+                            document.querySelector('.swal2-modal').style.border = '4px solid #D85C10';
+                            document.querySelector('.swal2-modal').style.height = '250px';
                             if (/Mobi|Android/i.test(navigator.userAgent)) {
-                                document.querySelector(".swal2-modal").style.height = '1500px';
+                                document.querySelector('.swal2-modal').style.height = '1500px';
                             }
-                            document.querySelector(".swal2-modal").style.width = '100%';
+                            document.querySelector('.swal2-modal').style.width = '100%';
                         }
                     }
                     document.querySelector('form').reset();
@@ -261,13 +253,13 @@
                             });
                             var success_sound = new Audio('/music/success.mp3');
                             success_sound.play();
-                            document.querySelector(".swal2-modal").style.backgroundColor = '#3EACFE';
-                            document.querySelector(".swal2-modal").style.border = '4px solid #D85C10';
-                            document.querySelector(".swal2-modal").style.height = '250px';
+                            document.querySelector('.swal2-modal').style.backgroundColor = '#3EACFE';
+                            document.querySelector('.swal2-modal').style.border = '4px solid #D85C10';
+                            document.querySelector('.swal2-modal').style.height = '250px';
                             if (/Mobi|Android/i.test(navigator.userAgent)) {
-                                document.querySelector(".swal2-modal").style.height = '1500px';
+                                document.querySelector('.swal2-modal').style.height = '1500px';
                             }
-                            document.querySelector(".swal2-modal").style.width = '100%';
+                            document.querySelector('.swal2-modal').style.width = '100%';
                         }
                     }
                     document.querySelector('form').reset();
@@ -310,13 +302,13 @@
                             });
                             var success_sound = new Audio('/music/success.mp3');
                             success_sound.play();
-                            document.querySelector(".swal2-modal").style.backgroundColor = '#3EACFE';
-                            document.querySelector(".swal2-modal").style.border = '4px solid #D85C10';
-                            document.querySelector(".swal2-modal").style.height = '250px';
+                            document.querySelector('.swal2-modal').style.backgroundColor = '#3EACFE';
+                            document.querySelector('.swal2-modal').style.border = '4px solid #D85C10';
+                            document.querySelector('.swal2-modal').style.height = '250px';
                             if (/Mobi|Android/i.test(navigator.userAgent)) {
-                                document.querySelector(".swal2-modal").style.height = '1500px';
+                                document.querySelector('.swal2-modal').style.height = '1500px';
                             }
-                            document.querySelector(".swal2-modal").style.width = '100%';
+                            document.querySelector('.swal2-modal').style.width = '100%';
                         }
                     }
                     document.querySelector('form').reset();
@@ -359,13 +351,13 @@
                             });
                             var success_sound = new Audio('/music/success.mp3');
                             success_sound.play();
-                            document.querySelector(".swal2-modal").style.backgroundColor = '#3EACFE';
-                            document.querySelector(".swal2-modal").style.border = '4px solid #D85C10';
-                            document.querySelector(".swal2-modal").style.height = '250px';
+                            document.querySelector('.swal2-modal').style.backgroundColor = '#3EACFE';
+                            document.querySelector('.swal2-modal').style.border = '4px solid #D85C10';
+                            document.querySelector('.swal2-modal').style.height = '250px';
                             if (/Mobi|Android/i.test(navigator.userAgent)) {
-                                document.querySelector(".swal2-modal").style.height = '1500px';
+                                document.querySelector('.swal2-modal').style.height = '1500px';
                             }
-                            document.querySelector(".swal2-modal").style.width = '100%';
+                            document.querySelector('.swal2-modal').style.width = '100%';
                         }
                     }
                     document.querySelector('form').reset();
@@ -408,22 +400,21 @@
                             });
                             var success_sound = new Audio('/music/success.mp3');
                             success_sound.play();
-                            document.querySelector(".swal2-modal").style.backgroundColor = '#3EACFE';
-                            document.querySelector(".swal2-modal").style.border = '4px solid #D85C10';
-                            document.querySelector(".swal2-modal").style.height = '250px';
+                            document.querySelector('.swal2-modal').style.backgroundColor = '#3EACFE';
+                            document.querySelector('.swal2-modal').style.border = '4px solid #D85C10';
+                            document.querySelector('.swal2-modal').style.height = '250px';
                             if (/Mobi|Android/i.test(navigator.userAgent)) {
-                                document.querySelector(".swal2-modal").style.height = '1500px';
+                                document.querySelector('.swal2-modal').style.height = '1500px';
                             }
-                            document.querySelector(".swal2-modal").style.width = '100%';
+                            document.querySelector('.swal2-modal').style.width = '100%';
                         }
                     }
                     document.querySelector('form').reset();
                     break;
                 default:
-                        var error_sound = new Audio('/music/error.mp3');
-                        error_sound.play();
+                    var error_sound = new Audio('/music/error.mp3');
+                    error_sound.play();
             }
         });
     </script>
 </html>
-
