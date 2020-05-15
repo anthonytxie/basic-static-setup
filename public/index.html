@@ -1,7 +1,7 @@
 <html>
     <link rel="stylesheet" type="text/css" href="/index.css" />
     <link rel="stylesheet" type="text/js" href="/js/photography.js" />
-    <link rel="icon" type="image/png" href='/images/favicon.png' />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
 
     <section>
         <div>
@@ -78,6 +78,13 @@
     </section>
     <script>
         var music = new Audio('/music/main-theme.mp3');
-        music.play();
+        if (/Mobi|Android/i.test(navigator.userAgent)) {
+            document.querySelector('body').addEventListener('touchstart', function () {
+                music.play();
+
+            });
+        } else {
+            music.play();
+        }
     </script>
 </html>

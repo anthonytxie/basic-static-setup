@@ -91,7 +91,14 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script>
         var music = new Audio('/music/saloon.mp3');
-        music.play();
+        if (/Mobi|Android/i.test(navigator.userAgent)) {
+            document.querySelector('body').addEventListener('touchstart', function () {
+                music.play();
+
+            });
+        } else {
+            music.play();
+        }
     </script>
     <script>
         var count = 1000;
