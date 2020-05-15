@@ -1,16 +1,12 @@
-
 @font-face {
-	font-family: 'stardewFont';
-	src: url('fonts/Stardew_Valley.otf'); 
-	src: 
-		local('Stardew Valley'),
-		local('Stardew-Valley'),
-		url('fonts/Stardew_Valley.otf') 
-		format('opentype');
+    font-family: 'stardewFont';
+    src: url('fonts/Stardew_Valley.otf');
+    src: local('Stardew Valley'), local('Stardew-Valley'), url('fonts/Stardew_Valley.otf') format('opentype');
 }
 
-section h1, h2 {
-    color: #E19F0E;
+section h1,
+h2 {
+    color: #e19f0e;
     font-family: stardewFont;
     margin: 20px;
     font-size: 4rem;
@@ -21,7 +17,7 @@ section h2 {
 }
 
 section p {
-    color: #E19F0E;
+    color: #e19f0e;
     font-family: stardewFont;
     margin: 10px;
     font-size: 1.5rem;
@@ -33,14 +29,11 @@ section p {
     width: 800px;
     justify-content: center;
     margin: auto;
-
 }
-
 
 .back {
     float: left;
     font-size: 1rem;
-
 }
 .requirement {
     height: 100px;
@@ -50,12 +43,13 @@ section p {
 }
 
 html {
-    background: #2FA1FA url("/images/valley-background.png");
-    background-size: auto;
-    background-repeat:   no-repeat;
-    background-position: center center;   
+    background: #5DC7B2;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/valley-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
 }
-
 .bundle-flexbox {
     display: flex;
     width: 1000px;
@@ -64,7 +58,8 @@ html {
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 150px;
-
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .bundle-box-placeholder {
@@ -72,57 +67,52 @@ html {
     height: 100px;
     margin: 20px;
     background-image: url('/images/item-placeholder.png');
-    background-size:     cover;                      /* <------ */
+    background-size: cover; /* <------ */
 
-    background-repeat:   no-repeat;
-    background-position: center center;   
-    
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 #requirement-1 {
     background-image: url('/images/camera.png');
-    background-size:     cover;                     
-    background-repeat:   no-repeat;
-    background-position: center center;       
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 #requirement-2 {
     background-image: url('/images/cooking.png');
-    background-size:     cover;                      
-    background-repeat:   no-repeat;
-    background-position: center center;       
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
-
 
 #requirement-3 {
     background-image: url('/images/coffee.png');
-    background-size:     cover;                     
-    background-repeat:   no-repeat;
-    background-position: center center;       
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
-
 
 #requirement-4 {
     background-image: url('/images/music.png');
-    background-size:     cover;                     
-    background-repeat:   no-repeat;
-    background-position: center center;       
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
-
 
 #requirement-5 {
     background-image: url('/images/makeup.png');
-    background-size:     cover;                     
-    background-repeat:   no-repeat;
-    background-position: center center;       
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
-
 
 #requirement-6 {
     background-image: url('/images/bath.png');
-    background-size:     cover;                     
-    background-repeat:   no-repeat;
-    background-position: center center;       
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .requirement-item-flexbox {
@@ -135,7 +125,6 @@ html {
     text-align: center;
 }
 
-
 form {
     margin: 20px;
     display: flex;
@@ -145,44 +134,62 @@ html {
     font-family: stardewFont;
 }
 
-input[type="text"] {
+input[type='text'] {
     font-family: stardewFont;
     font-size: 20px;
-    border: 4px solid #FF8237;
-    background: #F5B369;
+    border: 4px solid #ff8237;
+    background: #f5b369;
     color: white;
-
 }
 
 button {
-    background: #F7E389;
-    border: 4px solid #FF8237;
+    background: #f7e389;
+    border: 4px solid #ff8237;
     color: gray;
 }
 
-
-
 audio {
-    margin-top: 100px;
+    margin-top: 200px;
     zoom: 0.5;
 }
 
-
-/* bundle complete */ 
+/* bundle complete */
 
 .swal2-show {
-    background: rgb(62,172,254)
+    background: rgb(62, 172, 254);
 }
 
 #swal2-title {
-    color: #3AE3F4;
+    color: #3ae3f4;
 }
 
-
 #swal2-content {
-    color: #3AE3F4;
+    color: #3ae3f4;
 }
 
 a {
-    text-decoration:none;
+    text-decoration: none;
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+    .requirement {
+        width: 200px;
+        height: 200px;
+    }
+
+    .bundle-flexbox {
+        flex-direction: column;
+        align-items: center;
+    }
+    .requirement-description {
+        width: 200px;
+    }
+    .requirement-description p {
+        font-size: 36px;
+    }
+    section {
+        margin: 20px;
+        margin-top: 80px;
+    }
 }

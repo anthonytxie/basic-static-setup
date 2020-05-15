@@ -1,3 +1,4 @@
+
 <html>
     <link rel="stylesheet" type="text/css" href="/salon.css" />
     <link rel="stylesheet" type="text/js" href="/js/photography.js" />
@@ -7,6 +8,14 @@
             <a href='/' class='back'>←</a>
             <h1>Salon Bundle</h1>
         </div>
+        <div class='flexbox-container'>
+
+        <div>
+            <form>
+                <input type="text" id="code" name="secret-code" placeholder="enter the secret codes!" /><br /><br />
+                <button type="submit">Submit</button>
+            </form>
+        </div>
 
         <div class="bundle-flexbox">
             <div class="bundle-box-placeholder"></div>
@@ -14,16 +23,17 @@
             <div class="bundle-box-placeholder"></div>
             <div class="bundle-box-placeholder"></div>
         </div>
-        <div>
-            <form>
-                <input type="text" id="code" name="secret-code" placeholder="enter the secret codes!" /><br /><br />
-                <button type="submit">Submit</button>
-            </form>
         </div>
+
         <div>
             <h2>
                 Requirements
             </h2>
+            <p>
+                Acquire 4 out of the items in the bundle. Once you have them, send a message to Toni to get the secret
+                codes...
+            </p>
+
             <div class="requirements-flexbox">
                 <div class='requirement-item-flexbox'>
                     <div class="requirement" id="requirement-1">
@@ -81,11 +91,6 @@
                     </div>
                 </div>
             </div>
-            <p>
-                Acquire 4 out of the items in the bundle. Once you have them, send a message to Toni to get the secret
-                codes...
-            </p>
-
             <audio controls autoplay>  
                 <source src="/music/salon.mp3" type="audio/mp3">  
             </audio>  
@@ -160,6 +165,9 @@
                             document.querySelector(".swal2-modal").style.backgroundColor = '#3EACFE';
                             document.querySelector(".swal2-modal").style.border = '4px solid #D85C10';
                             document.querySelector(".swal2-modal").style.height = '250px';
+                            if (/Mobi|Android/i.test(navigator.userAgent)) {
+                                document.querySelector(".swal2-modal").style.height = '1500px';
+                            }
                             document.querySelector(".swal2-modal").style.width = '100%';
                         }
                     }
@@ -206,6 +214,9 @@
                             document.querySelector(".swal2-modal").style.backgroundColor = '#3EACFE';
                             document.querySelector(".swal2-modal").style.border = '4px solid #D85C10';
                             document.querySelector(".swal2-modal").style.height = '250px';
+                            if (/Mobi|Android/i.test(navigator.userAgent)) {
+                                document.querySelector(".swal2-modal").style.height = '1500px';
+                            }
                             document.querySelector(".swal2-modal").style.width = '100%';
                         }
                     }
@@ -252,6 +263,9 @@
                             document.querySelector(".swal2-modal").style.backgroundColor = '#3EACFE';
                             document.querySelector(".swal2-modal").style.border = '4px solid #D85C10';
                             document.querySelector(".swal2-modal").style.height = '250px';
+                            if (/Mobi|Android/i.test(navigator.userAgent)) {
+                                document.querySelector(".swal2-modal").style.height = '1500px';
+                            }
                             document.querySelector(".swal2-modal").style.width = '100%';
                         }
                     }
@@ -298,6 +312,9 @@
                             document.querySelector(".swal2-modal").style.backgroundColor = '#3EACFE';
                             document.querySelector(".swal2-modal").style.border = '4px solid #D85C10';
                             document.querySelector(".swal2-modal").style.height = '250px';
+                            if (/Mobi|Android/i.test(navigator.userAgent)) {
+                                document.querySelector(".swal2-modal").style.height = '1500px';
+                            }
                             document.querySelector(".swal2-modal").style.width = '100%';
                         }
                     }
@@ -344,6 +361,9 @@
                             document.querySelector(".swal2-modal").style.backgroundColor = '#3EACFE';
                             document.querySelector(".swal2-modal").style.border = '4px solid #D85C10';
                             document.querySelector(".swal2-modal").style.height = '250px';
+                            if (/Mobi|Android/i.test(navigator.userAgent)) {
+                                document.querySelector(".swal2-modal").style.height = '1500px';
+                            }
                             document.querySelector(".swal2-modal").style.width = '100%';
                         }
                     }
@@ -390,6 +410,9 @@
                             document.querySelector(".swal2-modal").style.backgroundColor = '#3EACFE';
                             document.querySelector(".swal2-modal").style.border = '4px solid #D85C10';
                             document.querySelector(".swal2-modal").style.height = '250px';
+                            if (/Mobi|Android/i.test(navigator.userAgent)) {
+                                document.querySelector(".swal2-modal").style.height = '1500px';
+                            }
                             document.querySelector(".swal2-modal").style.width = '100%';
                         }
                     }
@@ -402,3 +425,4 @@
         });
     </script>
 </html>
+
